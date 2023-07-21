@@ -1,11 +1,11 @@
 {
   "name": "prettier-microbundle-ava-ts",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Your project description",
   "repository": "https://github.com/DeathVenom54/typescript-minimal-starter.git",
   "author": "DeathVenom54 <fdragon602@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "source": "src/main.ts",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
@@ -25,8 +25,16 @@
     "start": "node dist/main.js",
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "prettier -c './*{tests,src}/*.{ts,tsx,js,jsx}' && ava",
-    "format": "prettier package.json './*{tests,src}/*.{ts,tsx,js,jsx}' --write --single-quote --trailing-comma all",
-    "all": "pnpm format && pnpm build && pnpm test && pnpm start"
-  }
+    "test": "prettier -c tsconfig.json package.json './*{tests,src}/*.{ts,tsx,js,jsx}' && ava",
+    "format": "prettier tsconfig.json package.json './*{tests,src}/*.{ts,tsx,js,jsx}' --write --single-quote --trailing-comma all",
+    "all": "pnpm format && pnpm build && pnpm test && pnpm start",
+    "deploy:dryrun": "npm publish --access public --dryrun",
+    "deploy": "npm publish --access public"
+  },
+  "keywords": [
+    "test",
+    "ava",
+    "typescrit",
+    "microbundle"
+  ]
 }
