@@ -1,6 +1,6 @@
 {
   "name": "prettier-microbundle-ava-ts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Your project description",
   "repository": "https://github.com/DeathVenom54/typescript-minimal-starter.git",
   "author": "DeathVenom54 <fdragon602@gmail.com>",
@@ -35,27 +35,27 @@
     "node": "^v18.12.0"
   },
   "scripts": {
-    "start": "node ./cli.js",
+    "clean": "rimraf dist dist-test cli.js",
+    "format": "prettier tsconfig*.json package.json './*{test,src}/*.{ts,tsx,js,jsx}' --write --single-quote --trailing-comma all",
     "build": "rimraf dist &&  microbundle",
-    "clean": "rimraf dist dist-test",
-    "dev": "microbundle watch",
+    "start": "node ./cli.js",
+    "dev": "node ./cli.ts --watch",
     "test": "prettier -c tsconfig.json package.json './*{test,src}/{*,*.test}.{ts,tsx,js,jsx}' && ava",
     "test:watch": "ava -watch",
-    "format": "prettier tsconfig*.json package.json './*{test,src}/*.{ts,tsx,js,jsx}' --write --single-quote --trailing-comma all",
-    "all": "pnpm clean && pnpm format && pnpm build && pnpm build:test && pnpm test && pnpm start",
+    "all": "pnpm clean && pnpm format && pnpm build && pnpm build:test && pnpm format && pnpm test && pnpm start",
     "build:test": "rimraf dist-test && tsc -p tsconfig.test.json"
   },
   "microbundle": {
     "sourcemap": true,
     "input": [
-      "src/**/*.ts",
-      "test/**/*.ts"
+      "src/**/*.ts"
     ]
   },
   "keywords": [
     "test",
     "ava",
     "typescrit",
-    "microbundle"
+    "microbundle",
+    "prettier"
   ]
 }

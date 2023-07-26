@@ -4,9 +4,11 @@
     "moduleResolution": "node",
     "target": "es2018",
     // Other options...
-    "outDir": "./dist-test",
+    //    "outDir": "./dist-test",
     /* Interop Constraints */
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */
-  }
+  },
   // Other configurations...
+  "include": ["test", "cli.ts"],
+  "exclude": ["node_modules", "dist", "dist-test", "src"]
 }

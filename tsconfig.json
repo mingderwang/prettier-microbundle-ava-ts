@@ -26,6 +26,6 @@
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["src", "test", "cli.ts"],
+  "include": ["src", "cli.ts"],
   "exclude": ["node_modules", "dist", "dist-test"]
 }
