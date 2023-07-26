@@ -1,22 +1,22 @@
 {
   "name": "prettier-microbundle-ava-ts",
-  "version": "1.1.5",
-  "description": "Your project description",
-  "repository": "https://github.com/DeathVenom54/typescript-minimal-starter.git",
-  "author": "DeathVenom54 <fdragon602@gmail.com>",
+  "version": "1.1.6",
+  "description": "hello-cli",
+  "repository": "https://github.com/mingderwang/prettier-microbundle-ava-ts",
+  "author": "DeathVenom54 <fdragon602@gmail.com>, Ming-der Wang<mingderwang@gmail.com",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "source": "src/main.ts",
   "main": "dist/main.umd.js",
   "module": "dist/main.modern.module.js",
   "unpkg": "dist/main.umd.js",
   "types": "dist/main.d.ts",
   "bin": {
-    "my-cli": "./cli.js"
+    "hello-cli": "./cli.js"
   },
   "files": [
-    "dist/src",
-    "src/cli.ts"
+    "dist",
+    "./cli.ts"
   ],
   "devDependencies": {
     "@fast-check/ava": "^1.0.1",
@@ -32,7 +32,7 @@
     "typescript": "^4.6.2"
   },
   "engines": {
-    "node": "^v18.12.0"
+    "node": "^v18.0.0"
   },
   "scripts": {
     "clean": "rimraf dist dist-test cli.js src/*.js test/*.js",

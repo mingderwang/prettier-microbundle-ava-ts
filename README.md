@@ -18,7 +18,5 @@ A minimal starter template for a Typescript node.js project
 
 You can use the following utility scripts to make commands easier
 
-- `yarn build` to transpile to Javascript
-- `yarn dev` to run the Typescript transpiler in watch mode
-- `yarn start to run your code`
+- `yarn all` to build and test all
 # prettier-microbundle-ava-ts
