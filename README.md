@@ -19,4 +19,29 @@ A minimal starter template for a Typescript node.js project
 You can use the following utility scripts to make commands easier
 
 - `yarn all` to build and test all
-# prettier-microbundle-ava-ts
+
+# 🥭🍍🍣🍜🥟🍢🥮🍡🍧🧋🍻💭 prettier-microbundle-ava-ts
+
+## User install
+
+```sh
+
+// build
+npm -g i prettier-microbundle-ava-ts@latest
+
+// run
+
+hello-cli
+```
+
+## Developer deploy
+
+```sh
+
+yarn all
+npm publish --access public
+
+
+```
+
+* make sure you had change "private" to false in package.json and update the version number.

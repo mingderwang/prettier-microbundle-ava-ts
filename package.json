@@ -1,6 +1,6 @@
 {
   "name": "prettier-microbundle-ava-ts",
-  "version": "1.1.6",
+  "version": "1.1.9",
   "description": "hello-cli",
   "repository": "https://github.com/mingderwang/prettier-microbundle-ava-ts",
   "author": "DeathVenom54 <fdragon602@gmail.com>, Ming-der Wang<mingderwang@gmail.com",
@@ -16,7 +16,7 @@
   },
   "files": [
     "dist",
-    "./cli.ts"
+    "src"
   ],
   "devDependencies": {
     "@fast-check/ava": "^1.0.1",
@@ -42,7 +42,7 @@
     "dev": "node ./cli.ts --watch",
     "test": "prettier -c tsconfig.json package.json './*{test,src}/{*,*.test}.{ts,tsx,js,jsx}' && ava",
     "test:watch": "ava -watch",
-    "all": "pnpm clean && pnpm format && pnpm build && pnpm build:test && pnpm format && pnpm test && pnpm start",
+    "all": "pnpm clean && pnpm build && pnpm build:test && pnpm format && pnpm test && pnpm start",
     "build:test": "rimraf dist-test && tsc -p tsconfig.test.json"
   },
   "microbundle": {
