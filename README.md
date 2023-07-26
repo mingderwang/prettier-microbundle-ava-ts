@@ -38,6 +38,7 @@ hello-cli
 
 ```sh
 
+yarn lint
 yarn all
 npm publish --access public
 
